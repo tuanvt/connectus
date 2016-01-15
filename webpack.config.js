@@ -32,7 +32,8 @@ var getPlugins = function(env) {
 var getLoaders = function(env) {
   var loaders = [
     { test: /\.js$/, include: path.join(__dirname, 'src'), loaders: ['babel', 'eslint'] },
-    { test: /(\.css|\.scss)$/, include: path.join(__dirname, 'src'), loaders: ['style', 'css', 'sass'] }
+    { test: /(\.css|\.scss)$/, include: path.join(__dirname, 'src'), loaders: ['style', 'css', 'sass'] },
+    { test: /vendor\/.+\.(jsx|js)$/,  loader: 'imports?jQuery=jquery,$=jquery,this=>window'}
   ];
 
   return loaders;

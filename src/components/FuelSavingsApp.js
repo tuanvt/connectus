@@ -5,7 +5,6 @@ import FuelSavingsTextInput from './FuelSavingsTextInput';
 class FuelSavingsCalculatorForm extends React.Component {
   constructor(props) {
     super(props);
-
     //why all the binds below? See here: https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-bind.md
     this.fuelSavingsKeypress = this.fuelSavingsKeypress.bind(this);
     this.props.actions.saveFuelSavings = this.props.actions.saveFuelSavings.bind(this);
